@@ -44,8 +44,12 @@ GEM
       forwardable-extended (~> 2.5)
     fastimage (2.4.0)
     ffi (1.17.1-x64-mingw-ucrt)
+    ffi (1.17.1-x86_64-linux-gnu)
     forwardable-extended (2.6.0)
     google-protobuf (4.29.3-x64-mingw-ucrt)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.3-x86_64-linux)
       bigdecimal
       rake (>= 13)
     html-proofer (3.19.4)
@@ -111,6 +115,8 @@ GEM
     minitest (5.25.4)
     nokogiri (1.18.2-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.18.2-x86_64-linux-gnu)
+      racc (~> 1.4)
     parallel (1.26.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -126,6 +132,8 @@ GEM
     rouge (4.5.1)
     safe_yaml (1.0.5)
     sass-embedded (1.83.4-x64-mingw-ucrt)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.83.4-x86_64-linux-gnu)
       google-protobuf (~> 4.29)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -147,6 +155,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails
