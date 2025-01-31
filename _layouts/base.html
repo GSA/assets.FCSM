@@ -21,18 +21,12 @@
 
       <h3>Available Resources:</h3>
       <ul>
-        {% for file in site.static_files %} {% if file.path contains 'assets/'
-        %}
+        <!-- Link directly to the assets folder -->
         <li>
-          <!-- Properly handle the href for local and deployed environments -->
-          <a
-            href="{{ site.url }}{{ site.baseurl }}{{ file.path | replace: 'assets/', '/assets/' }}"
-            target="_blank"
+          <a href="{{ site.baseurl }}/assets" target="_blank"
+            >Access All Assets</a
           >
-            {{ file.path | split: '/' | last }}
-          </a>
         </li>
-        {% endif %} {% endfor %}
       </ul>
     </main>
 
