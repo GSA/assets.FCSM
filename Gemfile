@@ -22,3 +22,7 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem 'jekyll-sass-converter', '~> 3.0'
+
+gem "wdm", "~> 0.1.0" if Gem.win_platform?
+
+gem "html-proofer", "~> 3.18"
