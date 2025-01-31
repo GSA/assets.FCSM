@@ -1,24 +1,38 @@
-{% comment %}
-This is used for just about every page. It provides the border around the content.
-The home page uses wide.html layout, since it extends full width of page
-{% endcomment %}
-
 <!DOCTYPE html>
-
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCSM Resource Repository</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css" />
+  </head>
 
-{% include meta.html %}
+  <body>
+    <!-- Simple Header -->
+    <header>
+      <h1>FCSM Resource Repository</h1>
+      <p>Your go-to place for all FCSM-related resources and assets.</p>
+    </header>
 
-<body>
-  {% include header.html %}
+    <!-- Main Content -->
+    <main>
+      <h2>Welcome to the FCSM Asset Repository</h2>
+      <p>This site stores all the necessary resources for the FCSM project.</p>
 
-  {% include menu.html primary_navigation=site.primary_navigation  secondary_navigation=site.secondary_navigation %}
+      <h3>Available Resources:</h3>
+      <ul>
+        <!-- Link directly to the assets folder -->
+        <li>
+          <a href="{{ site.baseurl }}/assets" target="_blank"
+            >Access All Assets</a
+          >
+        </li>
+      </ul>
+    </main>
 
-  {{ content }}
-
-  {% include footer.html %}
-
-  {% include scripts.html %}
-</body>
-
+    <!-- Simple Footer -->
+    <footer>
+      <p>&copy; 2025 FCSM. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
