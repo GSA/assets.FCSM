@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FCSM Resource Repository</title>
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/index.css" />
-    <!-- Example of linking CSS file from assets -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css" />
   </head>
 
   <body>
@@ -20,19 +19,26 @@
       <h2>Welcome to the FCSM Asset Repository</h2>
       <p>This site stores all the necessary resources for the FCSM project.</p>
 
-      <!-- Link to the assets folder -->
-      <p>
-        <a href="{{site.baseurl}}/assets/" target="_blank"
-          >Click here to view the list of resources in the assets folder</a
-        >
-      </p>
+      <h3>Available Resources:</h3>
+      <ul>
+        {% for file in site.static_files %} {% if file.path contains 'assets/'
+        %}
+        <li>
+          <!-- Properly handle the href for local and deployed environments -->
+          <a
+            href="{{ site.url }}{{ site.baseurl }}{{ file.path | replace: 'assets/', '/assets/' }}"
+            target="_blank"
+          >
+            {{ file.path | split: '/' | last }}
+          </a>
+        </li>
+        {% endif %} {% endfor %}
+      </ul>
     </main>
 
     <!-- Simple Footer -->
     <footer>
       <p>&copy; 2025 FCSM. All rights reserved.</p>
     </footer>
-
-    <!-- Example of linking JS file from assets -->
   </body>
 </html>
