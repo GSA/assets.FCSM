@@ -10,7 +10,7 @@
     "htmlproofer": "bundle exec htmlproofer _site"
   },
   "dependencies": {
-    "netlify-cms": "^2.10.179",
+    "netlify-cms": "^2.10.192",
     "uswds": "^2.13.1"
   },
   "devDependencies": {
