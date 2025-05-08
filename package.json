@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "dompurify": "^3.2.4",
-    "trim": "^1.0.1",
+    "trim": "^0.0.3",
     "uswds": "^2.13.1"
   },
   "devDependencies": {
