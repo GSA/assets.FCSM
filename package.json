@@ -10,7 +10,7 @@
     "htmlproofer": "bundle exec htmlproofer _site"
   },
   "dependencies": {
-    "dompurify": "^3.2.4",
+    "dompurify": "^3.3.1",
     "trim": "^0.0.3",
     "uswds": "^2.13.1"
   },
